@@ -25,23 +25,6 @@
     <script src="scripts/jquery-3.3.1.min.js"></script>
     <script src="scripts/jquery.cookie-1.4.1.min.js"></script>
     <script src="scripts/main.js"></script>
-    
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({
-              google_ad_client: "ca-pub-3761444858098861",
-              enable_page_level_ads: true
-         });
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128585239-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'UA-128585239-1');
-    </script>
 </head>
 <body>
     <header>

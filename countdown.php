@@ -26,7 +26,7 @@
 
 <main class="countdown" style="background-image: url('<?=$countdown["background"]?>');">
     <div>
-        <div class="local-nav">
+        <div class="local-nav <?=$countdown["black"] ? 'black' : ''?>">
             <div class="local-nav-content container">
                 <h2><?=$countdown["name"]?></h2>
                 <ul>
@@ -55,18 +55,18 @@
                 <?php } ?>
             </div>
             <div class="countdown-stats">
-                <div title="Görüntülenme" class="countdown-stat countdown-views">
+                <div title="Görüntülenme" class="countdown-stat countdown-views <?=$countdown["black"] ? 'black' : ''?>">
                     <i class="far fa-eye"></i> <?=$countdown["views"]?>
                 </div>
-                <div class="countdown-stat countdown-date" style="margin-left: 10px">
+                <div class="countdown-stat countdown-date <?=$countdown["black"] ? 'black' : ''?>" style="margin-left: 10px">
                     <strong>Gerçekleşme Tarihi:</strong> <?=date("j.n.Y", strtotime($countdown["date"]))?>
                 </div>
-                <div data-id="<?=$countdown["ID"]?>" title="Beğen" class="countdown-stat countdown-likes float" style="margin-left: auto;">
+                <div data-id="<?=$countdown["ID"]?>" title="Beğen" class="countdown-stat countdown-likes float <?=$countdown["black"] ? 'black' : ''?>" style="margin-left: auto;">
                     <i class="fa<?php if (isset($liked[$countdown["ID"]])) { echo "s"; } else { echo "r"; }?> fa-heart"></i> <?=$countdown["likes"]?>
                 </div>
             </div>
             <hr style="border-color: rgba(255, 255, 255, .75)">
-            <article class="article countdown-desc">
+            <article class="article countdown-desc <?=$countdown["black"] ? 'black' : ''?>">
                 <h2><?=$countdown["name"]?></h2>
                 <?php if ($countdown["description"]) {
                     echo $countdown["description"];

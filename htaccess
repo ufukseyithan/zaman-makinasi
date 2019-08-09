@@ -1,5 +1,0 @@
-ErrorDocument 404 https://www.zamanmakinasi.net/404.php
-
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}

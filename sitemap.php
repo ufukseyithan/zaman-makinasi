@@ -7,7 +7,7 @@
 
     echo '<url>
  
-       <loc>https://www.zamanmakinasi.net/</loc>
+       <loc>http://localhost/zaman-makinasi/</loc>
  
        <lastmod>2018-10-10</lastmod>
  
@@ -19,7 +19,7 @@
 
     echo '<url>
  
-       <loc>https://www.zamanmakinasi.net/index.php</loc>
+       <loc>http://localhost/zaman-makinasi/index.php</loc>
  
        <lastmod>2018-10-10</lastmod>
  
@@ -30,7 +30,7 @@
     </url>';
 
     try {
-        $db = new PDO("mysql:host=localhost;dbname=zamanmak_zamanmakinasi;charset=utf8", "zamanmak_masea", "9ctEyZ1u53");
+        $db = new PDO("mysql:host=localhost;dbname=zamanmakinasi", "root", "seaways123");
     } catch ( PDOException $e ){
         print $e->getMessage();
     }
@@ -47,7 +47,7 @@
     foreach ($categories as $category) {
         echo '<url>
     
-        <loc>https://www.zamanmakinasi.net/category.php?category='.$category["codeName"].'</loc>
+        <loc>http://localhost/zaman-makinasi/category.php?category='.$category["codeName"].'</loc>
     
         <lastmod>2018-10-10</lastmod>
     
@@ -65,7 +65,7 @@
     foreach ($countdowns as $countdown) {
         echo '<url>
     
-        <loc>https://www.zamanmakinasi.net/countdown.php?id='.$countdown["ID"].'</loc>
+        <loc>http://localhost/zaman-makinasi/countdown.php?id='.$countdown["ID"].'</loc>
     
         <lastmod>'.date('Y-m-d', strtotime($countdown["time"])).'</lastmod>
     
@@ -78,7 +78,7 @@
 
     echo '<url>
  
-       <loc>https://www.zamanmakinasi.net/about.php</loc>
+       <loc>http://localhost/zaman-makinasi/about.php</loc>
  
        <lastmod>2018-10-10</lastmod>
  
@@ -90,7 +90,7 @@
 
     echo '<url>
  
-       <loc>https://www.zamanmakinasi.net/help-center.php</loc>
+       <loc>http://localhost/zaman-makinasi/help-center.php</loc>
  
        <lastmod>2018-10-10</lastmod>
  
@@ -102,7 +102,7 @@
 
     echo '<url>
  
-       <loc>https://www.zamanmakinasi.net/legal.php?page=privacy-policy</loc>
+       <loc>http://localhost/zaman-makinasi/legal.php?page=privacy-policy</loc>
  
        <lastmod>2018-10-10</lastmod>
  
@@ -114,7 +114,7 @@
 
     echo '<url>
  
-        <loc>https://www.zamanmakinasi.net/legal.php?page=terms-of-use</loc>
+        <loc>http://localhost/zaman-makinasi/legal.php?page=terms-of-use</loc>
 
         <lastmod>2018-10-10</lastmod>
 

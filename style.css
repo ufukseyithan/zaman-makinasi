@@ -13,12 +13,12 @@
 /* settings */
 
 html {
-    background: var(--background);
+    background-color: var(--background);
     scroll-behavior: smooth;
 }
 
 body {
-    background: white;
+    background-color: white;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -163,7 +163,7 @@ summary {
     cursor: pointer;
     color: dodgerblue;
     padding: 10px;
-    background: whitesmoke;
+    background-color: whitesmoke;
 }
 
 summary::-webkit-details-marker {
@@ -208,14 +208,22 @@ details p {
     position: sticky;
     top: 50px;
     z-index: 2;
-    background: rgba(255, 255, 255, .9);
-    border-color: white;
-    transition: border-bottom .3s;
+    transition: backdrop-filter, background-color .3s;
     -webkit-position: sticky;
 }
 
+.local-nav.black {
+    color: white;
+}
+
 .local-nav.scrolled {
-    border-bottom: 1px solid whitesmoke;
+    border-bottom: 1px solid gray;
+    background-color: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(5px);
+}
+
+.local-nav.scrolled.black {
+    background-color: rgba(0, 0, 0, .5) !important;
 }
 
 .local-nav-content {
@@ -224,7 +232,7 @@ details p {
     align-items: flex-end;
     height: 50px;
     padding-bottom: 8px;
-    border-bottom: 1px solid whitesmoke;
+    border-bottom: 1px solid gray;
     white-space: nowrap;
     overflow: auto;
 }
@@ -240,16 +248,16 @@ details p {
 }
 
 .local-nav a {
-    color: lightgrey;
+    color: gray;
     transition: color .3s;
 }
 
 .local-nav a.active {
-    color: grey !important;
+    color: inherit !important;
 }
 
 .local-nav a:hover {
-    color: grey;
+    color: inherit;
 }
 
 a.link {
@@ -280,7 +288,7 @@ a.button:focus {
 }
 
 a.small-button {
-    background: var(--main);
+    background-color: var(--main);
     border-radius: 20px;
     padding: 3px 10px;
     color: white !important;
@@ -310,7 +318,7 @@ a.card {
 
 .countdown-item-content {
     flex-grow: 1;
-    background: black;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -338,7 +346,6 @@ a.card {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 .countdown-content {
@@ -372,15 +379,27 @@ a.card {
 .countdown-stat {
     padding: 10px;
     border-radius: 5px;
-    background: rgba(255, 255, 255, .9);
+    background-color: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(5px);
     white-space: nowrap;
     overflow: hidden;
+}
+
+.countdown-stat.black {
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .countdown-desc {
     padding: 10px;
     border-radius: 5px;
-    background: rgba(255, 255, 255, .9);
+    background-color: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(5px);
+}
+
+.countdown-desc.black {
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .float {
