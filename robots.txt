@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin/
+Disallow: start-up.php
+Disallow: ajax.php
+Disallow: footer.php
+Disallow: header.php
+Disallow: functions.php
+Disallow: /cgi-bin/

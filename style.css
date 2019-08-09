@@ -1,0 +1,484 @@
+:root {
+    --background: rgb(55, 55, 65);
+    --main: rgb(255, 55, 75);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* settings */
+
+html {
+    background: var(--background);
+    scroll-behavior: smooth;
+}
+
+body {
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background-color: var(--background);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    -webkit-position: sticky;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 100%;
+    overflow: auto;
+}
+
+nav a {
+    color: lightgrey;
+    transition: color .3s;
+}
+
+nav a.active {
+    color: grey !important;
+}
+
+nav a:hover {
+    color: grey;
+}
+
+footer {
+    background-color: var(--background);
+    color: gray;
+    font-size: smaller;
+    padding: 20px 0;
+}
+
+footer hr {
+    border-color: gray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+article.article {
+    line-height: 24px;
+}
+
+article.article h1, article.article h2, article.article h3, article.article h4, article.article h5, article.article h6 {
+    margin: 6px 0;
+}
+
+article.article p {
+    margin: 12px 0;
+}
+
+article.article ul {
+    padding-inline-start: 40px;
+}
+
+hr {
+    margin: 20px 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+input {
+    border-radius: none;
+    border: 0;
+    border-bottom: 2px solid var(--main);
+    color: var(--main);
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    margin-bottom: 2px;
+    transition: border-width .3s, margin .3s;
+}
+
+input:focus {
+    border-bottom-width: 4px;
+    margin: 0;
+}
+
+button {
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, .75);
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .75);
+    margin: 10px 0;
+    cursor: pointer;
+    transition: border-width .3s, padding .3s;
+    outline: none;
+    display: inline-block;
+}
+
+button:focus {
+    padding: 8px;
+    border-width: 4px;
+}
+
+main.main section {
+    padding: 20vh 0;
+    font-size: x-large;
+    display: flex;
+}
+
+main.main section input {
+    font-size: larger;
+}
+
+main.main section a.button {
+    border-color: white;
+    color: white;
+    font-size: small;
+}
+
+main.main section.container, main.main section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main.main section article {
+    width: 50%;
+}
+
+summary {
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: dodgerblue;
+    padding: 10px;
+    background: whitesmoke;
+}
+
+summary::-webkit-details-marker {
+    display: none
+}
+
+summary:before {
+    display: inline-block;
+    content: "+";
+    width: 30px;
+    text-align: center;
+}
+
+details[open] > summary:before {
+    content: "-";
+}
+
+details p {
+    padding: 10px;
+}
+
+/* settings end */
+
+/* add-ons */
+
+.container {
+    max-width: 960px;
+    width: 90%;
+    margin: auto;
+}
+
+#logo {
+    transition: color .3s;
+}
+
+#logo:hover {
+    color: var(--main);
+}
+
+.local-nav {
+    height: 50px;
+    position: sticky;
+    top: 50px;
+    z-index: 2;
+    background: rgba(255, 255, 255, .9);
+    border-color: white;
+    transition: border-bottom .3s;
+    -webkit-position: sticky;
+}
+
+.local-nav.scrolled {
+    border-bottom: 1px solid whitesmoke;
+}
+
+.local-nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 50px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid whitesmoke;
+    white-space: nowrap;
+    overflow: auto;
+}
+
+.local-nav ul {
+    display: flex;
+    list-style-type: none;
+    font-size: smaller;
+}
+
+.local-nav li {
+    margin-left: 20px;
+}
+
+.local-nav a {
+    color: lightgrey;
+    transition: color .3s;
+}
+
+.local-nav a.active {
+    color: grey !important;
+}
+
+.local-nav a:hover {
+    color: grey;
+}
+
+a.link {
+    color: dodgerblue;
+}
+
+a.link:hover {
+    text-decoration: underline;
+}
+
+a.button {
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, .75);
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .75);
+    margin: 10px 0;
+    cursor: pointer;
+    transition: border-width .3s, padding .3s;
+    outline: none;
+    display: inline-block;
+}
+
+a.button:focus {
+    padding: 8px;
+    border-width: 4px;
+}
+
+a.small-button {
+    background: var(--main);
+    border-radius: 20px;
+    padding: 3px 10px;
+    color: white !important;
+}
+
+a.card {
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.countdown-list {
+    grid-gap: 20px;
+}
+
+.countdown-list-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    color: black;
+    height: 200px;
+}
+
+.countdown-item-header {
+    padding: 10px;
+    color: var(--main);
+}
+
+.countdown-item-content {
+    flex-grow: 1;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    font-weight: bold;   
+    color: white
+}
+
+.countdown-item-footer {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.countdown-item-likes, .countdown-likes {
+    cursor: pointer;
+}
+
+.countdown-item-likes:hover .fa-heart, .countdown-likes:hover .fa-heart {
+    color: var(--main);
+}
+
+.countdown {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.countdown-content {
+    padding: 20px 0;
+}
+
+.countdown-counter {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 120px);
+    color: white;
+}
+
+.countdown-counter .fa-cog {
+    color: var(--main);
+    position: absolute;
+    font-size: 20em;
+}
+
+.countdown-counter-text {
+    text-align: center;
+    z-index: 1;
+}
+
+.countdown-stats {
+    display: flex;
+}
+
+.countdown-stat {
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .9);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.countdown-desc {
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .9);
+}
+
+.float {
+    border: 1px solid rgba(0, 0, 0, .1);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.float:hover {
+    box-shadow: 0 8px 20px 0px rgba(0, 0, 0, .1);
+    transform: translateY(-1px);
+}
+
+.float:active {
+    transform: translateY(0);
+}
+
+.content {
+    padding: 20px 0;
+}
+
+.block {
+    padding: 10vh 20px;
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    font-size: large;
+}
+
+#main-search {
+    width: 50%;
+}
+
+#main-search-list {
+    width: 50%;
+    display: none;
+    margin: auto;
+    text-align: left;
+    list-style: none;
+    padding: 20px 0;
+    height: 200px;
+}
+
+#main-search-list a {
+    color: var(--main);
+}
+
+.three-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.intro section {
+    padding: 20vh 0;                                                     
+}
+
+/* add-ons end */
+
+/*@media screen and (max-width: 384px) {
+    main.main section {
+        height: 100vh;
+    }
+}*/
+
+@media screen and (max-width: 768px) {
+    .three-column {
+        grid-template-columns: unset;
+    }
+
+    main.main section {
+        font-size: large;
+    }
+
+    main.main section article {
+        width: 75%;
+    }
+
+    main.main section.container, main.main section .container {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .countdown {
+        font-size: small;
+    }
+
+    #footer-bottom {
+        flex-direction: column;
+    }
+
+    #main-search, #main-search-list {
+        width: 75%;
+    }
+
+    .block {
+        font-size: medium;
+    }
+
+    nav li + li {
+        padding-left: 20px;
+    }
+}
