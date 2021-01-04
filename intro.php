@@ -58,7 +58,7 @@
             <ul>
                 <?php foreach ($categories as $category) { ?>
                 <li>
-                    <a href="category.php?category=<?=$category["codeName"]?>" class="link"><?=$category["name"]?></a>
+                    <a href="category.php?category=<?=$category["code-name"]?>" class="link"><?=$category["name"]?></a>
                 </li>
                 <?php } ?>
             </ul>

@@ -5,7 +5,7 @@
     date_default_timezone_set('Europe/Istanbul');
 
     try {
-        $db = new PDO("mysql:host=localhost;dbname=zamanmakinasi", "root", "seaways123");
+        $db = new PDO("mysql:host=localhost;dbname=zaman-makinasi", "root", "");
     } catch ( PDOException $e ){
         print $e->getMessage();
     }
@@ -36,3 +36,7 @@
     }
 
     require "functions.php";
+
+    $pageTitle = false;
+    $pageTags = false;
+    $pageDesc = false;

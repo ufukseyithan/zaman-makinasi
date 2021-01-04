@@ -3,6 +3,8 @@
     include "header.php";
 
     $pageTitle = "Beğendiklerin";
+
+    $found = false;
 ?>
 
 <main>

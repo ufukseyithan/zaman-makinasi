@@ -22,6 +22,8 @@
     $pageTitle = $countdown["name"];
     $pageTags = strtolower($countdown["name"]);
     $pageDesc = strip_tags($countdown["description"]);
+
+    $notRunCounter = false;
 ?>
 
 <main class="countdown" style="background-image: url('<?=$countdown["background"]?>');">

@@ -5,7 +5,7 @@
     $categoryCodeNames = array();
 
     foreach ($categories as $category) {
-        $categoryCodeNames[$category["name"]] = $category["codeName"];
+        $categoryCodeNames[$category["name"]] = $category["code-name"];
     }
 
     $category = $_GET["category"] ? setSafer($_GET["category"]) : "";
@@ -17,6 +17,8 @@
     }
 
     $pageTitle = $exists;
+
+    $found = false;
 ?>
 
 <main>

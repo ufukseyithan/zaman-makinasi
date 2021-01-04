@@ -35,7 +35,7 @@
                 </li>
                 <?php foreach ($categories as $category) { ?>
                 <li>
-                    <a href="category.php?category=<?=$category["codeName"]?>"><?=$category["name"]?></a>
+                    <a href="category.php?category=<?=$category["code-name"]?>"><?=$category["name"]?></a>
                 </li>
                 <?php } ?>
                 <li><a href="likes.php" title="Beğendiklerin"><i class="fas fa-heart"></i></a></li>
