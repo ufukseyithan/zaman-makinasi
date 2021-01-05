@@ -13,12 +13,13 @@
     $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    if (!$_COOKIE["cls"]) {
+    $liked;
+    if (empty($_COOKIE["cls"])) {
         setcookie("cls", json_encode(array()), time() + (86400 * 30));
+    } else {
+        $liked = json_decode($_COOKIE['cls'], true);
     }
-
-    $liked = json_decode($_COOKIE['cls'], true);
-
+    
     $countdowns = $db->prepare("SELECT * FROM countdowns WHERE auto=1 AND date < NOW()");
     $countdowns->execute();
     $countdowns = $countdowns->fetchAll();

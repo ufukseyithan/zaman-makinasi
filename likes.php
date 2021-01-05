@@ -2,6 +2,9 @@
     include "start-up.php";
     include "header.php";
 
+    if (!isset($liked))
+        echo "<script>location.reload()</script>";
+
     $pageTitle = "Beğendiklerin";
 
     $found = false;
